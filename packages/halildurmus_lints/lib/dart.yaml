@@ -165,7 +165,6 @@ linter:
     - unsafe_variance
     - use_enums
     - use_function_type_syntax_for_parameters
-    - use_if_null_to_convert_nulls_to_bools
     - use_is_even_rather_than_modulo
     - use_named_constants
     - use_null_aware_elements
