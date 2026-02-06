@@ -27,7 +27,7 @@ jobs:
           latest_commit_msg=$(git log -1 --pretty=format:%s)
           echo "📜 Latest commit: $latest_commit_msg"
 
-          if [[ "$latest_commit_msg" =~ ^chore\(release\):\ `package:halildurmus_lints` v.* ]]; then
+          if [[ "$latest_commit_msg" =~ ^chore\(release\):\ \`package:halildurmus_lints\` v.* ]]; then
             echo "🎉 Release commit detected. Proceeding with the publish step."
             echo "should_publish=true" >> $GITHUB_OUTPUT
           else

@@ -18,4 +18,5 @@ jobs:
     uses: halildurmus/workflows/.github/workflows/dart.yml@main
     with:
       analyze_directories: lib
+      working_directory: packages/halildurmus_lints
       run_tests: false
