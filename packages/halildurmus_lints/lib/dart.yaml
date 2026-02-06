@@ -122,12 +122,15 @@ linter:
     - prefer_void_to_null
     - provide_deprecation_message
     - recursive_getters
+    - remove_deprecations_in_breaking_versions
+    # - simplify_variable_pattern # TODO: Enable this when Dart 3.11 is released
     - secure_pubspec_urls
     - slash_for_doc_comments
     - sort_constructors_first
     - sort_pub_dependencies
     - sort_unnamed_constructors_first
     - specify_nonobvious_property_types
+    - switch_on_type
     - throw_in_finally
     - type_init_formals
     - type_literal_in_constant_pattern
@@ -139,6 +142,7 @@ linter:
     - unnecessary_const
     - unnecessary_constructor_name
     - unnecessary_getters_setters
+    - unnecessary_ignore
     - unnecessary_lambdas
     - unnecessary_late
     - unnecessary_library_directive
@@ -155,7 +159,7 @@ linter:
     - unnecessary_string_interpolations
     - unnecessary_this
     - unnecessary_to_list_in_spreads
-    # - unnecessary_unawaited # TODO: Enable this when 3.9 is stable
+    - unnecessary_unawaited
     - unreachable_from_main
     - unrelated_type_equality_checks
     - unsafe_variance
