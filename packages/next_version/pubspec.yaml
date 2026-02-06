@@ -1,7 +1,7 @@
 name: next_version
 description: A package that determines the next package version by analyzing
   conventional commits.
-publish_to: none
+version: 0.1.0
 repository: https://github.com/halildurmus/tools/tree/main/packages/next_version
 
 environment:

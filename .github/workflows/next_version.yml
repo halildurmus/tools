@@ -33,6 +33,10 @@ jobs:
 
   dartdoc:
     uses: halildurmus/workflows/.github/workflows/dartdoc.yml@main
+    with:
+      working_directory: packages/next_version
 
   pana:
     uses: halildurmus/workflows/.github/workflows/pana.yml@main
+    with:
+      working_directory: packages/next_version
