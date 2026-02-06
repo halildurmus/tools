@@ -9,6 +9,7 @@ jobs:
     name: Publish to pub.dev
     permissions:
       id-token: write
+      pull-requests: write
     uses: dart-lang/ecosystem/.github/workflows/publish.yaml@main
     with:
       write-comments: false
