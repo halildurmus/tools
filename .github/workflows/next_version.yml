@@ -1,0 +1,32 @@
+name: next_version
+
+on:
+  pull_request:
+    paths:
+      - .github/workflows/next_version.yml
+      - analysis_options.yaml
+      - pubspec.yaml
+      - packages/next_version/example/**
+      - packages/next_version/lib/**
+      - packages/next_version/test/**
+      - packages/next_version/analysis_options.yaml
+      - packages/next_version/pubspec.yaml
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/next_version.yml
+      - analysis_options.yaml
+      - pubspec.yaml
+      - packages/next_version/example/**
+      - packages/next_version/lib/**
+      - packages/next_version/test/**
+      - packages/next_version/analysis_options.yaml
+      - packages/next_version/pubspec.yaml
+
+jobs:
+  build:
+    uses: halildurmus/workflows/.github/workflows/dart.yml@main
+    with:
+      analyze_directories: example lib test
+      format_directories: example lib test
+      working_directory: packages/next_version

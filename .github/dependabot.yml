@@ -22,3 +22,7 @@ updates:
     directory: "/packages/halildurmus_lints"
     schedule:
       interval: "weekly"
+  - package-ecosystem: "pub"
+    directory: "/packages/next_version"
+    schedule:
+      interval: "weekly"

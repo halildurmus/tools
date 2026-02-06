@@ -1,0 +1,21 @@
+name: Prepare Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      package:
+        required: true
+        description: 'Package to release (directory name under packages/)'
+        type: choice
+        options:
+          # - halildurmus_hooks
+          - halildurmus_lints
+          - next_version
+
+jobs:
+  prepare-release:
+    uses: halildurmus/workflows/.github/workflows/prepare_release.yml@main
+    with:
+      working_directory: packages/${{ inputs.package }}
+    secrets:
+      token: ${{ secrets.PAT }}

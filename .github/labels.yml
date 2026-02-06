@@ -5,3 +5,7 @@
 - name: 'package: halildurmus_lints'
   color: '2FE436'
   description: Issue with package:halildurmus_lints
+
+- name: 'package: next_version'
+  color: '2FE436'
+  description: Issue with package:next_version

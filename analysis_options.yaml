@@ -1,0 +1,5 @@
+include: package:halildurmus_lints/dart.yaml
+
+analyzer:
+  errors:
+    todo: ignore

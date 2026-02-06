@@ -35,6 +35,7 @@ This package supports the following SDK versions:
 | Dart SDK  | Flutter SDK | Package Version   |
 | :-------: | :---------: | :---------------: |
 | `3.8.x`   | `3.32.x`    | `1.0.x`           |
+| `3.10.x`  | `3.38.x`    | `1.1.x`           |
 
 [language_badge]: https://img.shields.io/badge/language-Dart-blue.svg
 [language_link]: https://dart.dev

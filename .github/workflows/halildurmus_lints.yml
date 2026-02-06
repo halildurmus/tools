@@ -4,14 +4,24 @@ on:
   pull_request:
     paths:
       - .github/workflows/halildurmus_lints.yml
-      - lib/**
+      - analysis_options.yaml
       - pubspec.yaml
+      - packages/halildurmus_lints/example/**
+      - packages/halildurmus_lints/lib/**
+      - packages/halildurmus_lints/test/**
+      - packages/halildurmus_lints/analysis_options.yaml
+      - packages/halildurmus_lints/pubspec.yaml
   push:
     branches: [main]
     paths:
       - .github/workflows/halildurmus_lints.yml
-      - lib/**
+      - analysis_options.yaml
       - pubspec.yaml
+      - packages/halildurmus_lints/example/**
+      - packages/halildurmus_lints/lib/**
+      - packages/halildurmus_lints/test/**
+      - packages/halildurmus_lints/analysis_options.yaml
+      - packages/halildurmus_lints/pubspec.yaml
 
 jobs:
   build:
