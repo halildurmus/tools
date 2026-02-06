@@ -1,0 +1,21 @@
+name: halildurmus_lints
+
+on:
+  pull_request:
+    paths:
+      - .github/workflows/halildurmus_lints.yml
+      - lib/**
+      - pubspec.yaml
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/halildurmus_lints.yml
+      - lib/**
+      - pubspec.yaml
+
+jobs:
+  build:
+    uses: halildurmus/workflows/.github/workflows/dart.yml@main
+    with:
+      analyze_directories: lib
+      run_tests: false

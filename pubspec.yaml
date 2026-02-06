@@ -1,0 +1,12 @@
+name: tools_workspace
+publish_to: none
+
+environment:
+  sdk: ^3.10.0
+
+workspace:
+  - packages/halildurmus_lints
+
+dev_dependencies:
+  ffi: ^2.1.5
+  halildurmus_lints: ^1.0.1
