@@ -23,6 +23,10 @@ documentation:
   - changed-files:
       - any-glob-to-any-file: packages/halildurmus_lints/**
 
+'package: next_version':
+  - changed-files:
+      - any-glob-to-any-file: packages/next_version/**
+
 release:
   - head-branch: [^release, release]
 
