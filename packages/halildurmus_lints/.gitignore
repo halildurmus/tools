@@ -1,7 +1,0 @@
-# https://dart.dev/guides/libraries/private-files
-# Created by `dart pub`
-.dart_tool/
-
-# Omit commiting pubspec.lock for library packages:
-# https://dart.dev/guides/libraries/private-files#pubspeclock
-pubspec.lock
