@@ -5,10 +5,10 @@ on:
     inputs:
       package:
         required: true
-        description: 'Package to release (directory name under packages/)'
+        description: Package to release
         type: choice
         options:
-          # - halildurmus_hooks
+          - halildurmus_hooks
           - halildurmus_lints
           - next_version
 

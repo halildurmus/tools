@@ -30,3 +30,9 @@ jobs:
       analyze_directories: example lib test
       format_directories: example lib test
       working_directory: packages/next_version
+
+  dartdoc:
+    uses: halildurmus/workflows/.github/workflows/dartdoc.yml@main
+
+  pana:
+    uses: halildurmus/workflows/.github/workflows/pana.yml@main
