@@ -1,0 +1,32 @@
+ci:
+  - changed-files:
+      - any-glob-to-any-file:
+          - .github/**
+          - packages/*/cliff.toml
+          - codecov.yml
+          - lefthook.yml
+
+documentation:
+  - changed-files:
+      - any-glob-to-any-file:
+          - CONTRIBUTING.md
+          - README.md
+
+'external dependency':
+  - head-branch: [^dependabot]
+
+'package: halildurmus_hooks':
+  - changed-files:
+      - any-glob-to-any-file: packages/halildurmus_hooks/**
+
+'package: halildurmus_lints':
+  - changed-files:
+      - any-glob-to-any-file: packages/halildurmus_lints/**
+
+release:
+  - head-branch: [^release, release]
+
+test:
+  - changed-files:
+      - any-glob-to-all-files:
+          - packages/*/test/**

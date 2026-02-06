@@ -55,13 +55,10 @@ final versionSectionPattern = RegExp(
 );
 
 extension on String {
-  String stripChangelogHeader() => replaceFirst(
-        '''
+  String stripChangelogHeader() => replaceFirst('''
 # Changelog\n
 All notable changes to this project will be documented in this file.\n
-''',
-        '',
-      );
+''', '');
 
   String toUnixLineEndings() => replaceAll('\r\n', '\n');
 }

@@ -1,0 +1,7 @@
+- name: 'package: halildurmus_hooks'
+  color: '2FE436'
+  description: Issue with package:halildurmus_hooks
+
+- name: 'package: halildurmus_lints'
+  color: '2FE436'
+  description: Issue with package:halildurmus_lints

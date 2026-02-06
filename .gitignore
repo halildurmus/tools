@@ -1,0 +1,28 @@
+# Get rid of any unwanted executables.
+*.exe
+*.obj
+*.pdb
+*.exe.config
+
+# Files and directories created by pub.
+**/.dart_tool/
+**/.packages
+
+# IntelliJ related files.
+*.iml
+**/.idea/
+
+# Visual Studio Code related files.
+**/.vscode/
+
+# Library packages shouldn't check in their pubspec.lock files.
+**/pubspec.lock
+
+# Conventional directory for build outputs.
+**/build/
+
+# Don't need to check in coverage files.
+**/coverage/
+
+# Documentation doesn't need checking in here.
+**/doc/api/
