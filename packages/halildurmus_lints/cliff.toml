@@ -1,9 +1,9 @@
 # git-cliff ~ default configuration file
 # https://git-cliff.org/docs/configuration
 
-# [remote.github]
-# owner = "halildurmus"
-# repo = "tools"
+[remote.github]
+owner = "halildurmus"
+repo = "tools"
 
 [changelog]
 # template for the changelog header
@@ -68,7 +68,9 @@ footer = """
                 <REPO>/compare/{{ release.previous.version }}..{{ release.version }}
         {% endif -%}
     {% else -%}
-        [unreleased]: <REPO>/compare/{{ release.previous.version }}..HEAD
+        {% if release.previous.version -%}
+            [unreleased]: <REPO>/compare/{{ release.previous.version }}..HEAD
+        {% endif -%}
     {% endif -%}
 {% endfor %}
 """
