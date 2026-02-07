@@ -2,27 +2,27 @@ version: 2
 enable-beta-ecosystems: true
 updates:
   # Workflows
-  - package-ecosystem: "github-actions"
-    directory: "/"
+  - package-ecosystem: 'github-actions'
+    directory: '/'
     schedule:
-      interval: "weekly"
+      interval: 'weekly'
 
   # Workspace pubspec.yaml
-  - package-ecosystem: "pub"
-    directory: "/"
+  - package-ecosystem: 'pub'
+    directory: '/'
     schedule:
-      interval: "weekly"
+      interval: 'weekly'
 
   # Packages
-  # - package-ecosystem: "pub"
-  #   directory: "/packages/halildurmus_hooks"
-  #   schedule:
-  #     interval: "weekly"
-  - package-ecosystem: "pub"
-    directory: "/packages/halildurmus_lints"
+  - package-ecosystem: 'pub'
+    directory: '/packages/halildurmus_hooks'
     schedule:
-      interval: "weekly"
-  - package-ecosystem: "pub"
-    directory: "/packages/next_version"
+      interval: 'weekly'
+  - package-ecosystem: 'pub'
+    directory: '/packages/halildurmus_lints'
     schedule:
-      interval: "weekly"
+      interval: 'weekly'
+  - package-ecosystem: 'pub'
+    directory: '/packages/next_version'
+    schedule:
+      interval: 'weekly'

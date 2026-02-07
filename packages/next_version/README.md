@@ -3,7 +3,8 @@
 [![Language: Dart][language_badge]][language_link]
 [![License: BSD-3-Clause][license_badge]][license_link]
 
-**A Dart package for calculating the next semantic version based on conventional commits.**
+**A Dart package for calculating the next semantic version based on conventional
+commits.**
 
 `package:next_version` analyzes commit messages that follow the
 [Conventional Commits](https://www.conventionalcommits.org/) specification and

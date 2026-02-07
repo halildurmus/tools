@@ -5,7 +5,7 @@ environment:
   sdk: ^3.10.0
 
 workspace:
-  # - packages/halildurmus_hooks
+  - packages/halildurmus_hooks
   - packages/halildurmus_lints
   - packages/next_version
 

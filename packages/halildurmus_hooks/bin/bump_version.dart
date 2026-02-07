@@ -1,0 +1,114 @@
+import 'dart:convert';
+import 'dart:io';
+
+import 'package:next_version/next_version.dart';
+import 'package:yaml_edit/yaml_edit.dart';
+
+final _semverTagRegex = RegExp(
+  r'(?:^|-)v(\d+\.\d+\.\d+(?:[-+][0-9A-Za-z\.-]+)?)$',
+);
+
+String _getCurrentVersion(YamlEditor yamlEditor) {
+  final versionNode = yamlEditor.parseAt([
+    'version',
+  ], orElse: () => wrapAsYamlNode(null));
+  if (versionNode.value == null) {
+    _exitWithError('❌ "version" field not found in "pubspec.yaml".');
+  }
+
+  final currentVersion = versionNode.value as String;
+  print('📦 Current version: $currentVersion');
+  return currentVersion;
+}
+
+String _getLastGitTag() {
+  final result = Process.runSync('git', const [
+    'describe',
+    '--tags',
+    '--abbrev=0',
+  ]);
+  if (result.exitCode != 0) {
+    _exitWithError('❌ Failed to retrieve the latest Git tag.');
+  }
+  final lastTag = result.stdout.toString().trim();
+  print('🏷️  Last Git tag: $lastTag');
+  return lastTag;
+}
+
+List<String> _getCommitMessagesSince(String latestTag) {
+  final result = Process.runSync('git', [
+    'log',
+    '$latestTag..HEAD',
+    '--pretty=format:%s',
+  ]);
+  if (result.exitCode != 0) {
+    _exitWithError('❌ Error retrieving commit messages.');
+  }
+  return LineSplitter.split(result.stdout.toString().trim()).toList();
+}
+
+Version _calculateNextVersion(String lastTag, List<String> commitMessages) {
+  final match = _semverTagRegex.firstMatch(lastTag);
+  if (match == null) {
+    _exitWithError(
+      '❌ Unsupported Git tag format: "$lastTag". '
+      'Expected "vX.Y.Z" or "package_name-vX.Y.Z".',
+    );
+  }
+
+  final versionString = match!.group(1)!;
+  final lastPublishedVersion = Version.parse(versionString);
+
+  final nextVersion = lastPublishedVersion.nextVersion(commitMessages);
+  if (nextVersion == lastPublishedVersion) {
+    print('✅ No version bump required.');
+    exit(0);
+  }
+
+  return nextVersion;
+}
+
+void _updatePubspecVersion(
+  File pubspecFile,
+  YamlEditor yamlEditor,
+  String nextVersion,
+) {
+  try {
+    yamlEditor.update(['version'], nextVersion);
+    pubspecFile.writeAsStringSync(yamlEditor.toString());
+    print('📦 Updated version in pubspec.yaml to: $nextVersion');
+  } catch (e) {
+    _exitWithError('❌ Error updating pubspec.yaml: $e');
+  }
+}
+
+void _exitWithError(String message) {
+  print(message);
+  exit(1);
+}
+
+void main(List<String> args) {
+  final pubspecFile = File('pubspec.yaml');
+  final pubspecContent = pubspecFile.readAsStringSync();
+  final yamlEditor = YamlEditor(pubspecContent);
+  final currentVersion = _getCurrentVersion(yamlEditor);
+  final lastTag = _getLastGitTag();
+
+  final commitMessages = _getCommitMessagesSince(lastTag);
+  if (commitMessages.isEmpty) {
+    print('✅ No new commits since the last tag.');
+    return;
+  }
+
+  print('📜 Commit messages since the last tag:');
+  commitMessages.forEach(print);
+
+  final nextVersion = _calculateNextVersion(lastTag, commitMessages);
+  if (nextVersion.toString() == currentVersion) {
+    print('✅ No version bump required.');
+    return;
+  }
+
+  print('🚀 Next version: $nextVersion');
+  _updatePubspecVersion(pubspecFile, yamlEditor, nextVersion.toString());
+}

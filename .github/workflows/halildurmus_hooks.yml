@@ -1,0 +1,29 @@
+name: halildurmus_hooks
+
+on:
+  pull_request:
+    paths:
+      - .github/workflows/halildurmus_hooks.yml
+      - analysis_options.yaml
+      - pubspec.yaml
+      - packages/halildurmus_hooks/bin/**
+      - packages/halildurmus_hooks/analysis_options.yaml
+      - packages/halildurmus_hooks/pubspec.yaml
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/halildurmus_hooks.yml
+      - analysis_options.yaml
+      - pubspec.yaml
+      - packages/halildurmus_hooks/bin/**
+      - packages/halildurmus_hooks/analysis_options.yaml
+      - packages/halildurmus_hooks/pubspec.yaml
+
+jobs:
+  build:
+    uses: halildurmus/workflows/.github/workflows/dart.yml@main
+    with:
+      analyze_directories: bin
+      format_directories: bin
+      run_tests: false
+      working_directory: packages/halildurmus_hooks

@@ -1,0 +1,9 @@
+name: example
+description: An example project that uses package:halildurmus_hooks.
+publish_to: none
+
+environment:
+  sdk: ^3.10.0
+
+dev_dependencies:
+  halildurmus_hooks: ^0.1.0
