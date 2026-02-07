@@ -49,3 +49,12 @@ commit-msg:
  `package_name-vX.Y.Z`.
 - `update_changelog` script requires `git-cliff` to be installed and available
   on `PATH`.
+
+[language_badge]: https://img.shields.io/badge/language-Dart-blue.svg
+[language_link]: https://dart.dev
+[license_badge]: https://img.shields.io/github/license/halildurmus/tools?color=blue
+[license_link]: https://opensource.org/licenses/BSD-3-Clause
+[package_badge]: https://img.shields.io/pub/v/halildurmus_hooks.svg
+[package_link]: https://pub.dev/packages/halildurmus_hooks
+[publisher_badge]: https://img.shields.io/pub/publisher/halildurmus_hooks.svg
+[publisher_link]: https://pub.dev/publishers/halildurmus.dev
