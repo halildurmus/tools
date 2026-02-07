@@ -14,7 +14,7 @@ and semantic versioning.**
 | [next_version](packages/next_version/) | A Dart package for calculating the next semantic version based on conventional commits | [![Package: next_version][next_version_package_badge]][next_version_package_link] |
 
 [halildurmus_hooks_package_badge]: https://img.shields.io/pub/v/halildurmus_hooks.svg
-[halildurmus_hooks_package_link]: https://pub.dev/packages/halildurmus
+[halildurmus_hooks_package_link]: https://pub.dev/packages/halildurmus_hooks
 [halildurmus_lints_package_badge]: https://img.shields.io/pub/v/halildurmus_lints.svg
 [halildurmus_lints_package_link]: https://pub.dev/packages/halildurmus_lints
 [next_version_package_badge]: https://img.shields.io/pub/v/next_version.svg
