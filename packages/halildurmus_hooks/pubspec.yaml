@@ -1,0 +1,26 @@
+name: halildurmus_hooks
+description: A collection of scripts for Git hooks.
+version: 0.1.0
+repository: https://github.com/halildurmus/tools/tree/main/packages/halildurmus_hooks
+
+environment:
+  sdk: ^3.10.0
+
+resolution: workspace
+
+dependencies:
+  args: ^2.7.0
+  conventional_commit: ^0.6.1+1
+  next_version: ^0.1.0
+  yaml_edit: ^2.2.3
+
+dev_dependencies:
+  halildurmus_lints: ^1.1.0
+
+executables:
+  analyze:
+  bump_version:
+  check_commit:
+  format:
+  test:
+  update_changelog:
