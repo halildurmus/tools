@@ -12,7 +12,7 @@ resolution: workspace
 dependencies:
   args: ^2.7.0
   conventional_commit: ^0.6.1+1
-  next_version: ^0.1.0
+  next_version: ^0.1.1
   yaml_edit: ^2.2.3
 
 dev_dependencies:
