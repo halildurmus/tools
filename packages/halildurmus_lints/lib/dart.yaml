@@ -123,7 +123,7 @@ linter:
     - provide_deprecation_message
     - recursive_getters
     - remove_deprecations_in_breaking_versions
-    # - simplify_variable_pattern # TODO: Enable this when Dart 3.11 is released
+    - simplify_variable_pattern
     - secure_pubspec_urls
     - slash_for_doc_comments
     - sort_constructors_first
