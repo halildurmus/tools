@@ -1,7 +1,7 @@
 name: halildurmus_hooks
 description: A curated collection of reusable scripts designed to simplify,
   automate, and standardize common Git hook workflows across projects.
-version: 0.1.0
+version: 0.1.1
 repository: https://github.com/halildurmus/tools/tree/main/packages/halildurmus_hooks
 
 environment:
