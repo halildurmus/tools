@@ -17,4 +17,4 @@ environment:
 resolution: workspace
 
 dev_dependencies:
-  halildurmus_hooks: ^0.1.0
+  halildurmus_hooks: ^0.1.1
