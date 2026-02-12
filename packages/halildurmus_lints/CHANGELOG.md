@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.0.0] - 2026-02-12
+
+### 🚀 Features
+
+- [**breaking**] Enable `simplify_variable_pattern` rule by @halildurmus
+
+[2.0.0]: https://github.com/halildurmus/tools/compare/halildurmus_lints-v1.1.0..halildurmus_lints-v2.0.0
+
 ## [1.1.0] - 2026-02-06
 
 ### 🚀 Features

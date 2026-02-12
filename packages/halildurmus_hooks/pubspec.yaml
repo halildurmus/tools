@@ -15,7 +15,7 @@ dependencies:
   yaml_edit: ^2.2.3
 
 dev_dependencies:
-  halildurmus_lints: ^1.1.0
+  halildurmus_lints: ^2.0.0
 
 executables:
   analyze:

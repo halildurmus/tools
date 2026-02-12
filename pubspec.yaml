@@ -2,12 +2,10 @@ name: tools_workspace
 publish_to: none
 
 environment:
-  sdk: ^3.10.0
+  sdk: ^3.11.0
 
 workspace:
-  - packages/halildurmus_hooks
-  - packages/halildurmus_lints
-  - packages/next_version
+  - packages/*
 
 dev_dependencies:
-  halildurmus_lints: ^1.1.0
+  halildurmus_lints: ^2.0.0
