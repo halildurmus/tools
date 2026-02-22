@@ -63,4 +63,5 @@ All notable changes to this project will be documented in this file.\n
   String toUnixLineEndings() => replaceAll('\r\n', '\n');
 }
 
-void main() => print(extractLatestChangelog());
+void main() =>
+    File('changelog.txt').writeAsStringSync(extractLatestChangelog());
